@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "title": "Rose Marry perfume",
+        "name": "Rose Merry Perfume",
+        "price": 299.999999999999,
+        "oldPrice": 399.99999999,
+        "discount": 25,
+        "rating": 5,
+        "reviews": 1,
+        "image": "./1.webp",
+        "category": "Black Salt Perfume",
+        "description":"This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion, This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion"
+
+
+
+    },
+    {
+        "id": 2,
+        "title": "Rose Ed perfume",
+        "name": "Rose Ed Perfume",
+        "price": 279,
+        "oldPrice": 379,
+        "discount": 25,
+        "rating": 3,
+        "reviews": 1,
+        "image": "./2.webp",
+        "category": "Black Salt Perfume",
+        "description": "This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion, This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women, this fragrance can be worn on any occasion,This perfume is a perfect blend of elegance and freshness, designed to leave a long-lasting impression. It features a balanced mix of floral, woody, and slightly sweet notes that create a refreshing yet bold fragrance. Suitable for both men and women"
+    },
+    {
+        "id": 3,
+        "title": "Purple flower perfume",
+        "name": "Purple Flower Perfume",
+        "price": 249,
+        "oldPrice": 349,
+        "discount": 25,
+        "rating": 4,
+        "reviews": 1,
+        "image": "./3.webp",
+        "category": "Black Salt Perfume",
+        "description":"A crisp and refreshing fragrance that keeps you feeling energized throughout the day. A crisp and refreshing fragrance that keeps you feeling energized throughout the day"
+    },
+    {
+        "id": 4,
+        "title": "Dark perfume",
+        "name": "Dark Perfume For Man",
+        "price": 369,
+        "oldPrice": 469,
+        "discount": 25,
+        "rating": 2,
+        "reviews": 1,
+        "image": "./4.webp",
+        "category": "Black Salt Perfume",
+        "description":"Crafted with premium ingredients, this luxurious fragrance embodies elegance and sophistication. Crafted with premium ingredients, this luxurious fragrance embodies elegance and sophistication.A crisp and refreshing fragrance that keeps you feeling energized throughout the day."
+    }
+]
