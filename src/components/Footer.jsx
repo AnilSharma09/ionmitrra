@@ -1,11 +1,7 @@
-import React from 'react'
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className="bg-black-400  text-white text-centre p-4">
-            ©2026 IONMITRRA </div>
-    
-  )
+    <footer className="bg-black text-white text-center p-4 text-sm">
+      ©2026 IONMITRRA
+    </footer>
+  );
 }
-
-export default Footer

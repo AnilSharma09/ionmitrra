@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
-import ProductId from './pages/ProductId'
+import Wishlist from './pages/Wishlist'
 
 
 
@@ -21,10 +21,11 @@ export const App = () => {
   <Route element={<Layout/>}>
         <Route path="/" element={<Home/>}/> 
         <Route path="/products" element={<Products/>}/> 
+        <Route path="/wishlist" element={<Wishlist/>}/>
         <Route path="/cart" element={<Cart/>}/> 
-        <Route path="/product-details" element={<ProductDetails/>}/> 
-        <Route path="/product-details" element={<ProductDetails/>}/>
-        <Route path="/products/:productId" element={<ProductId/>}/>
+        <Route path="/product/:slug" element={<ProductDetails/>}/> 
+        
+        
    
   </Route>
 </Routes>

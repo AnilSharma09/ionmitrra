@@ -1,56 +1,54 @@
-import { useState } from "react";
+import { useParams } from "react-router-dom";
+
+import { useEffect } from "react";
+import productData from "../data/productData.json";
+import ProductCard from "../components/ProductCard";
 import DetailCard from "../components/DetailCard";
-import productData from "../data/productData.json"
+import { slugify } from "../utils/Slug";
 
 
- function ProductDetails() {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("all");
+export default function ProductDetails() {
+  const { slug } = useParams(); 
 
-  const categories = ["all", ...new Set(productData.map((p) => p.category))]
+  
+  const product = productData.find(
+    (p) => slugify(p.name) === slug || String(p.id) === slug
+  );
 
-  const filtered = productData.filter((p) => {
-    const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase());
-    const matchesCategory = category === "all" || p.category === category;
-    return matchesQuery && matchesCategory;
-  });
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [slug]);
+
+  if (!product) {
+    return (
+      <div className="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h1 className="text-2xl font-bold text-slate-800 mb-3">Product not found</h1>
+        <Link to="/products" className="text-green-700 font-semibold underline">
+          Back to products
+        </Link>
+      </div>
+    );
+  }
+
+  const related = productData.filter((p) => p.id !== product.id);
 
   return (
-    <div>
-      <div className="flex flex-col sm:flex-row gap-2 mb-4">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search products..."
-          className="flex-1 border rounded p-2 bg-white"
-        />
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+      <DetailCard key={product.id} product={product} />
 
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          className="border rounded p-2 bg-white capitalize"
-        >
-          {categories.map((cart1, index) => (
-            <option key={index} value={cart1}>
-              {cart1}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {filtered.length === 0 ? (
-        <p className="text-gray-500">No products found.</p>
-      ) : (
-        <div className="grid grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-5 lg:gap-6 mb-12">
-          {filtered.map((p) => (
-            <DetailCard key={p.id} product={p} />
-            
-          ))}
-        </div>
+      {related.length > 0 && (
+        <section>
+          <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-5">
+            You May Also Like
+          </h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
+            {related.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
+          </div>
+        </section>
       )}
     </div>
   );
 }
-
-export default ProductDetails

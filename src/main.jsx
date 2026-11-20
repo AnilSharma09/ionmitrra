@@ -7,6 +7,8 @@ import { App } from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { CartProvider } from './context/CartContext';
+import { WishlistProvider } from './context/WishlistContext';
+
 
 
 
@@ -14,7 +16,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <CartProvider>
-    <App />
+      <WishlistProvider>
+        <App />
+      </WishlistProvider>
     </CartProvider>
     </BrowserRouter>
   </StrictMode>

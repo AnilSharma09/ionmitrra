@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext'
+import { useWishlistContex } from '../context/WishlistContext';
+import { slugify } from '../utils/Slug';
 
 
 
 function ProductCard({product}) {
-  const [liked, setLiked] = useState(false);
-  const {addToCart} = useCartContext();
+ const {addToCart} = useCartContext();
+ const {isLiked, toggleLike} = useWishlistContex();
   
-  const { image, title, name, price, oldPrice, rating, reviews } = product
+  const {id, image, title, name, price, oldPrice, rating, reviews } = product
+  const liked = isLiked(id);
+  const link = `/product/${slugify(name)}`;
+
 
   const discount = oldPrice
     ? Math.round(((oldPrice - price) / oldPrice) * 100)
@@ -16,11 +22,12 @@ function ProductCard({product}) {
   return (
     <div className="group w-full bg-white rounded-3xl shadow-md p-3 sm:p-4 flex flex-col">
       <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[180px] sm:h-[240px] md:h-[260px]">
-        <img
+       <Link to={link} className="block w-full h-full"> <img
           src={image}
           alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
+        </Link>
 
         {discount > 0 && (
           <span className="absolute top-2 left-2 bg-green-100 text-green-600 font-semibold text-xs sm:text-sm px-3 py-1 rounded-full">
@@ -29,9 +36,11 @@ function ProductCard({product}) {
         )}
 
         <button
-          onClick={() => setLiked(!liked)}
+         type='button'
+          onClick={() => toggleLike(id)}
+          aria-pressed={liked}
           className="absolute top-2 right-2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100/90 flex items-center justify-center"
-          aria-label="Add to wishlist"
+          aria-label={liked ? "Remove from Wishlist" : "Add to Wishlist"}
         >
           
            <i
@@ -45,10 +54,11 @@ function ProductCard({product}) {
       </div>
 
       <div className="pt-4 flex flex-col flex-1">
+        <Link to={link}>
         <h2 className="font-bold text-[15px] sm:text-[18px] mb-1 truncate text-gray-900">
           {name}
         </h2>
-
+</Link>
         <div className="flex items-center gap-1 mb-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <span

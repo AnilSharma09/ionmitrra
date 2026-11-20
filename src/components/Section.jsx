@@ -23,7 +23,7 @@ export default function Section(){
             
            <div className="w-full md:w-1/2">
             <div className="h-[280px] overflow-hidden rounded-2xl sm:h-[360px] md:h-[450px]">
-                <img src="/card3..png" alt="image" className="h-full w-full object-cover  transition-transform duration-700 hover:scale-105"
+                <img src="/a.webp" alt="image" className="h-full w-full object-cover  transition-transform duration-700 hover:scale-105"
                 />
             </div>
             </div>
