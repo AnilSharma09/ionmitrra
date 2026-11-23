@@ -27,7 +27,7 @@ export default function CartCard() {
         </div>
       ) : (
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-          {/* Items */}
+        
           <div className="w-full lg:flex-[1.8] flex flex-col gap-4">
             {cart.map((item) => {
               const link = `/product/${slugify(item.name)}`;
@@ -115,7 +115,7 @@ export default function CartCard() {
             })}
           </div>
 
-          {/* Summary */}
+          
           <div className="w-full lg:flex-1 border border-gray-200 rounded-3xl p-5 sm:p-8 bg-white shadow-sm lg:sticky lg:top-24">
             <h2 className="text-xl font-bold text-slate-900 mb-6">Order Summary</h2>
 

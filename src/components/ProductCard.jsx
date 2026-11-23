@@ -20,8 +20,10 @@ function ProductCard({product}) {
     : 0
 
   return (
-    <div className="group w-full bg-white rounded-3xl shadow-md p-3 sm:p-4 flex flex-col">
-      <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[180px] sm:h-[240px] md:h-[260px]">
+   
+    <div className="group  w-full bg-white rounded-3xl shadow-md p-3 sm:p-4 flex  flex-col">
+      <div className="container ,">
+      <div className=" relative rounded-2xl sm:rounded-3xl overflow-hidden h-[180px] sm:h-[240px] md:h-[260px]">
        <Link to={link} className="block w-full h-full"> <img
           src={image}
           alt={title}
@@ -91,7 +93,10 @@ function ProductCard({product}) {
   Add to Cart
 </button>
       </div>
+      </div>
     </div>
+
+    
   )
 }
 

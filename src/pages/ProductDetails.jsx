@@ -22,7 +22,7 @@ export default function ProductDetails() {
 
   if (!product) {
     return (
-      <div className="max-w-6xl mx-auto px-4 py-20 text-center">
+      <div className="max-w-7xl mx-auto px-4 py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-800 mb-3">Product not found</h1>
         <Link to="/products" className="text-green-700 font-semibold underline">
           Back to products
