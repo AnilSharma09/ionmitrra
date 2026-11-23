@@ -26,7 +26,7 @@ export default function useCart() {
     return () => window.removeEventListener("storage", sync);
   }, []);
 
-  const addToCart = (product) => {
+  const addToCart = (product, qty = 1 ) => {
     setCart((prev) => {
       const exists = prev.find((p) => p.id === product.id);
       if (exists) {
@@ -34,7 +34,7 @@ export default function useCart() {
           p.id === product.id ? { ...p, qty: p.qty + 1 } : p
         );
       }
-      return [...prev, { ...product, qty: 1 }];
+      return [...prev, { ...product, qty }];
     });
   };
 

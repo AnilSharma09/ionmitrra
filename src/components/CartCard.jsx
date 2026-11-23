@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import { getDiscount } from "../utils/discount";
 import { useCartContext } from "../context/CartContext";
 import { slugify } from "../utils/Slug";
-import { getDiscount } from "../utils/Discount";
 
 export default function CartCard() {
   const { cart, increaseQty, decreaseQty, removeFromCart } = useCartContext();
@@ -12,7 +12,7 @@ export default function CartCard() {
   const itemCount = cart.reduce((s, i) => s + i.qty, 0);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 bg-white min-h-[70vh]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 bg-white min-h-[70vh]">
       <h1 className="text-2xl sm:text-3xl font-medium text-slate-800 mb-6 sm:mb-8 tracking-tight">
         Your Cart
         <span className="text-slate-400 font-normal"> ({itemCount} items)</span>
@@ -27,7 +27,7 @@ export default function CartCard() {
         </div>
       ) : (
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-        
+          {/* Items */}
           <div className="w-full lg:flex-[1.8] flex flex-col gap-4">
             {cart.map((item) => {
               const link = `/product/${slugify(item.name)}`;
@@ -115,7 +115,7 @@ export default function CartCard() {
             })}
           </div>
 
-          
+          {/* Summary */}
           <div className="w-full lg:flex-1 border border-gray-200 rounded-3xl p-5 sm:p-8 bg-white shadow-sm lg:sticky lg:top-24">
             <h2 className="text-xl font-bold text-slate-900 mb-6">Order Summary</h2>
 

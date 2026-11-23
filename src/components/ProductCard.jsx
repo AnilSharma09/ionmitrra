@@ -12,7 +12,7 @@ function ProductCard({product}) {
   
   const {id, image, title, name, price, oldPrice, rating, reviews } = product
   const liked = isLiked(id);
-  const link = `/product/${slugify(name)}`;
+  const link = `/product/${slugify(id)}`;
 
 
   const discount = oldPrice
